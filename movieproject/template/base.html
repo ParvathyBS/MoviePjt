@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+        image{border:4px solid orange; width: 120px;height: 100px;}
+        h1{text-transform:uppercase}
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <img src="{% static 'bg4.jpeg' %}" alt="My image" width="300" height="115px" align="right" float="right">
+</head>
+<body>
+<!-- As a link -->
+<nav class="navbar navbar-light bg-light" >
+  <a class="navbar-brand" href="#">Hollywood Movies</a>
+</nav>
+
+<!-- As a heading -->
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">Explore Movies Here</span>
+</nav>
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

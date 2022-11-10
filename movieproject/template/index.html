@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 style="font-family:Georgia;text-align:left"><u>MOVIE LIST</u></h1><br><br>
+<div class="row">
+    {% for i in ml %}
+    <div class="box">
+        <img src="{{i.image.url}}" width="150" height="150" margin="10px">
+        <p><a href="{% url 'movieapp:details' i.id %}"><h2>{{i.id}}.{{i.name}} &emsp;</h2></a></p><br>
+    </div>
+    {% endfor %}
+</div>
+<a class="btn btn-warning" href="{% url 'movieapp:addmovie' %}"><h2>ADD MOVIE</h2></a>
+{% endblock %}
+
